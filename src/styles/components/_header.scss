@@ -1,44 +1,45 @@
-@use '../variables';
+@use "../variables";
 
 .navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 45px 0 0 0;
+  display: flex;
+  max-width: 1240px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  @media (max-width: 768px) {
+    justify-content: left;
+  }
+  img {
+    padding: 20px 0;
+    height: 68px;
     @media (max-width: 768px) {
-        justify-content: left;
+      height: 46.88px;
     }
-    img {
-        padding: 20px 0;
-        height: 68px;
-        @media (max-width: 768px) {
-            height: 46.88px;
-        }
+  }
+  nav {
+    display: flex;
+    gap: 57px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 34px;
+    text-align: right;
+    @media (max-width: 768px) {
+      margin-left: 26px;
+      gap: 26px;
+      font-size: 12px;
+      line-height: 17.11px;
+      text-transform: uppercase;
     }
-    nav {
-        display: flex;
-        gap: 57px;
-        font-size: 24px;
-        font-weight: 500;
-        line-height: 34px;
-        text-align: right;
-        @media (max-width: 768px) {
-            margin-left: 26px;
-            gap: 26px;
-            font-size: 12px;
-            line-height: 17.11px;
-            text-transform: uppercase;
-        }
-        a {
-            color: variables.$primary-color;
-            text-decoration: none;
-            &:not(.active) {
-                border-bottom: none;
-            }
-            &.active {
-                border-bottom: solid 1px variables.$primary-color;
-            }
-        }
+    a {
+      color: variables.$primary-color;
+      text-decoration: none;
+      &:not(.active) {
+        border-bottom: none;
+      }
+      &.active {
+        border-bottom: solid 1px variables.$primary-color;
+      }
     }
+  }
 }
