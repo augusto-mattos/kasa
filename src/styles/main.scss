@@ -1,0 +1,13 @@
+@use 'variables';
+@use './components/header';
+
+body {
+    display: flex;
+    flex-direction: column;
+    max-width: 1240px;
+    height: 68px;
+    justify-content: center;
+    margin: 0 20px;
+    padding: 45px 0 0 0;
+    font-family: 'Montserrat';
+}
