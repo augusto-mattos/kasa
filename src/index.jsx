@@ -6,6 +6,7 @@ import FicheLogement from "./pages/Accommodation";
 import About from "./pages/About";
 import Error from "./pages/Error";
 import Header from "./components/header";
+import Footer from "./components/footer";
 import "../src/assets/styles.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -19,6 +20,7 @@ root.render(
         <Route path="/about" element={<About />} />
         <Route path="*" element={<Error />} />
       </Routes>
+      <Footer />
     </Router>
   </React.StrictMode>
 );
