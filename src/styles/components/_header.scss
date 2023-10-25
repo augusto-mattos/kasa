@@ -1,12 +1,11 @@
 @use "../variables";
+@use "../mixins";
 
 .navbar {
+  @include mixins.desktop-max-width();
   display: flex;
-  max-width: 1240px;
-  margin: 0 auto;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
   @media (max-width: 768px) {
     justify-content: left;
   }
