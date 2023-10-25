@@ -133,6 +133,67 @@
   }
 }
 
+.gallery-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  padding: 25px 0;
+  justify-content: center;
+  background-color: #F6F6F6;
+}
+@media (max-width: 768px) {
+  .gallery-container {
+    background-color: #ffffff;
+    gap: 22px;
+    margin-top: 0;
+    padding: 22px 0;
+  }
+}
+.gallery-container .logement-card {
+  display: flex;
+  position: relative;
+  margin: 25px;
+  width: 340px;
+  height: 360px;
+}
+@media (max-width: 768px) {
+  .gallery-container .logement-card {
+    margin: 0;
+    width: 100%;
+    height: 255px;
+  }
+}
+.gallery-container .logement-card .overlay-card {
+  display: flex;
+  position: absolute;
+  align-items: flex-end;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.gallery-container .logement-card h3 {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin: 20px;
+}
+.gallery-container .logement-card .logement-cover {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
 body {
   display: flex;
   flex-direction: column;

@@ -1,6 +1,7 @@
 @use "./components/header";
 @use "./components/footer";
 @use "./components/banner";
+@use "./components/cards";
 
 body {
   display: flex;
