@@ -2,6 +2,7 @@
 @use "./components/footer";
 @use "./components/banner";
 @use "./components/cards";
+@use "./components/collapse";
 
 body {
   display: flex;
