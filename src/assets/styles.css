@@ -194,6 +194,28 @@
   border-radius: 10px;
 }
 
+.accordion {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #FF6060;
+  border-radius: 5px;
+  padding: 10px 15px 10px 15px;
+  margin-top: 50px;
+}
+.accordion .accordion-header {
+  cursor: pointer;
+  padding: 10px;
+  text-align: left;
+  font-weight: bold;
+}
+.accordion .accordion-header.expanded {
+  background-color: #ccc;
+}
+.accordion .accordion-content {
+  padding: 10px;
+}
+
 body {
   display: flex;
   flex-direction: column;
