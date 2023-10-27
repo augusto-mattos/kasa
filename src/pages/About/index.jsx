@@ -1,11 +1,11 @@
 import Banner from "../../components/banner";
-import Collapse from "../../components/collapse";
+import Accordion from "../../components/accordion";
 
 function About() {
   return (
     <>
       <Banner />
-      <Collapse />
+      <Accordion />
     </>
   );
 }
