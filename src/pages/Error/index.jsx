@@ -1,7 +1,9 @@
+import Error404 from "../../components/error404";
+
 function Error() {
   return (
     <div>
-      <h1>404</h1>
+      <Error404 />
     </div>
   );
 }
