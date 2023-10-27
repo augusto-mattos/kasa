@@ -3,6 +3,7 @@
 @use "./components/banner";
 @use "./components/cards";
 @use "./components/accordion";
+@use "./components/error404";
 
 body {
   display: flex;
@@ -15,4 +16,7 @@ body {
 
 .main-container {
   padding: 45px 20px;
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
 }

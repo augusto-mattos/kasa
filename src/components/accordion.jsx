@@ -11,13 +11,13 @@ function AccordionItem({ title, content }) {
   };
 
   return (
-    <div className="accordion">
-      <div className={`accordion-header ${isExpanded ? 'expanded' : ''}`} onClick={toggleAccordion}>
+    <>
+      <div className={`accordion ${isExpanded ? 'expanded' : ''}`} onClick={toggleAccordion}>
         {title}
         {isExpanded ? <img src={arrowDown} alt="Expanded" /> : <img src={arrowUp} alt="Collapsed" />}
       </div>
      {isExpanded && <div className="accordion-content">{content}</div>}
-    </div>
+    </>
   );
 }
 
