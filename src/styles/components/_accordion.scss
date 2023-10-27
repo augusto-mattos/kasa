@@ -1,0 +1,41 @@
+@use "../variables";
+@use "../mixins";
+
+.collapse {
+  @include mixins.desktop-max-width();
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 50px;
+  .accordion {
+    background-color: variables.$primary-color;
+    border-radius: 5px;
+    .accordion-header {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 15px;
+      color: #ffffff;
+      font-family: Montserrat;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 34px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+    .accordion-content {
+      display: flex;
+      gap: 10px;
+      background-color: variables.$secondary-color;
+      color: variables.$primary-color;
+      padding: 20px 20px 20px 20px;
+      border-radius: 0 0 5px 5px;
+      font-family: Montserrat;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 26px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+  }
+}
