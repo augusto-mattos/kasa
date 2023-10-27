@@ -200,18 +200,21 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 30px;
   margin-top: 50px;
+}
+@media (max-width: 768px) {
+  .collapse {
+    margin-top: 20px;
+  }
 }
 .collapse .accordion {
   background-color: #FF6060;
   border-radius: 5px;
-}
-.collapse .accordion .accordion-header {
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   padding: 10px 15px;
+  margin-bottom: 30px;
   color: #ffffff;
   font-family: Montserrat;
   font-size: 24px;
@@ -220,19 +223,36 @@
   letter-spacing: 0em;
   text-align: left;
 }
-.collapse .accordion .accordion-content {
+.collapse .accordion.expanded, .collapse .accordion:last-of-type {
+  margin-bottom: 0;
+}
+@media (max-width: 768px) {
+  .collapse .accordion {
+    margin-bottom: 20px;
+  }
+}
+.collapse .accordion-content {
   display: flex;
   gap: 10px;
   background-color: #F6F6F6;
   color: #FF6060;
   padding: 20px 20px 20px 20px;
   border-radius: 0 0 5px 5px;
+  margin-bottom: 30px;
   font-family: Montserrat;
   font-size: 18px;
   font-weight: 400;
   line-height: 26px;
   letter-spacing: 0em;
   text-align: left;
+}
+.collapse .accordion-content:last-of-type {
+  margin-bottom: 0;
+}
+@media (max-width: 768px) {
+  .collapse .accordion-content {
+    margin-bottom: 20px;
+  }
 }
 
 body {
@@ -246,6 +266,11 @@ body {
 
 .main-container {
   padding: 45px 20px;
+}
+@media (max-width: 768px) {
+  .main-container {
+    padding: 20px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

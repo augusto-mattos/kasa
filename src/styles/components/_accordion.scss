@@ -5,37 +5,53 @@
   @include mixins.desktop-max-width();
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  // gap: 30px;
   margin-top: 50px;
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
   .accordion {
     background-color: variables.$primary-color;
     border-radius: 5px;
-    .accordion-header {
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      padding: 10px 15px;
-      color: #ffffff;
-      font-family: Montserrat;
-      font-size: 24px;
-      font-weight: 500;
-      line-height: 34px;
-      letter-spacing: 0em;
-      text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    margin-bottom: 30px; // remplace le gap 30px
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+    &.expanded,
+    &:last-of-type { // remplace le gap 30px
+      margin-bottom: 0;
     }
-    .accordion-content {
-      display: flex;
-      gap: 10px;
-      background-color: variables.$secondary-color;
-      color: variables.$primary-color;
-      padding: 20px 20px 20px 20px;
-      border-radius: 0 0 5px 5px;
-      font-family: Montserrat;
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 26px;
-      letter-spacing: 0em;
-      text-align: left;
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+  }
+  .accordion-content {
+    display: flex;
+    gap: 10px;
+    background-color: variables.$secondary-color;
+    color: variables.$primary-color;
+    padding: 20px 20px 20px 20px;
+    border-radius: 0 0 5px 5px;
+    margin-bottom: 30px; // remplace le gap 30px
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    &:last-of-type { // remplace le gap 30px
+      margin-bottom: 0;
+    }
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
     }
   }
 }
