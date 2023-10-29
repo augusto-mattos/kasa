@@ -200,59 +200,65 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: 15px;
 }
 @media (max-width: 768px) {
   .collapse {
-    margin-top: 20px;
+    margin-top: 0;
   }
 }
-.collapse .accordion {
+.collapse .accordion-header {
   background-color: #FF6060;
   border-radius: 5px;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   padding: 10px 15px;
-  margin-bottom: 30px;
   color: #ffffff;
+  margin-top: 30px;
+}
+@media (max-width: 768px) {
+  .collapse .accordion-header {
+    margin-top: 22px;
+  }
+}
+.collapse .accordion-header h3 {
   font-family: Montserrat;
   font-size: 24px;
   font-weight: 500;
   line-height: 34px;
   letter-spacing: 0em;
   text-align: left;
+  margin: 0;
 }
-.collapse .accordion.expanded, .collapse .accordion:last-of-type {
-  margin-bottom: 0;
+.collapse .accordion-header .arrow {
+  transition: transform 0.3s ease-in-out;
 }
-@media (max-width: 768px) {
-  .collapse .accordion {
-    margin-bottom: 20px;
-  }
+.collapse .accordion-header .arrow.rotate {
+  transform: rotate(180deg);
 }
 .collapse .accordion-content {
   display: flex;
   gap: 10px;
+  max-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  padding: 0 20px;
   background-color: #F6F6F6;
   color: #FF6060;
-  padding: 20px 20px 20px 20px;
-  border-radius: 0 0 5px 5px;
-  margin-bottom: 30px;
   font-family: Montserrat;
   font-size: 18px;
   font-weight: 400;
   line-height: 26px;
   letter-spacing: 0em;
   text-align: left;
+  border-radius: 0 0 5px 5px;
+  transition: all 0.5s ease-in-out;
 }
-.collapse .accordion-content:last-of-type {
-  margin-bottom: 0;
-}
-@media (max-width: 768px) {
-  .collapse .accordion-content {
-    margin-bottom: 20px;
-  }
+.collapse .accordion-content.expanded {
+  max-height: 200px;
+  padding: 20px 20px 20px 20px;
+  visibility: visible;
 }
 
 .error-container {
