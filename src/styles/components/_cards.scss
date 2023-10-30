@@ -46,6 +46,7 @@
         }
         .logement-cover {
             object-fit: cover;  
+            position: absolute;
             @include mixins.radius-10();
         }
     }
