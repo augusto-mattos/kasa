@@ -6,7 +6,7 @@ function Cards() {
     <div className="gallery-container">
       {data.map((logement) => (
         <div key={logement.id} id={logement.id} className="logement-card">
-            <Link to={`/logement/${logement.id}`}>
+          <Link to={`/logement/${logement.id}`}>
             <img
               src={logement.cover}
               alt="card de logement"
@@ -15,8 +15,8 @@ function Cards() {
             <div className="overlay-card">
               <h3>{logement.title}</h3>
             </div>
-        </Link>
-          </div>
+          </Link>
+        </div>
       ))}
     </div>
   );
