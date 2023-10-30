@@ -1,11 +1,9 @@
-import data from "../../data/annonces.json";
+import Caroussel from "../../components/caroussel";
 
 function FicheLogement() {
   return (
-    <div>
-      Logement page
-    </div>
-  );
+    <Caroussel />
+  )
 }
 
 export default FicheLogement;
