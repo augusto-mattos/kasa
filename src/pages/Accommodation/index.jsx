@@ -1,7 +1,9 @@
+import data from "../../data/annonces.json";
+
 function FicheLogement() {
   return (
     <div>
-      <h1>Fiche logement</h1>
+      Logement page
     </div>
   );
 }
