@@ -1,9 +1,7 @@
 import Cards from "./cards";
 
 function Gallery() {
-  return(
-        <Cards />
-  )
+  return <Cards />;
 }
 
 export default Gallery;

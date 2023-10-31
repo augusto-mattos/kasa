@@ -5,32 +5,23 @@ import imgBannerAbout from "../assets/banner-about.png";
 function Banner() {
   const location = useLocation();
 
-  if (location.pathname === "/") {
-    return (
-      <div className="banner">
-        <img
-          className="banner-image"
-          src={imgBannerAccueil}
-          alt="banner de la page d'accueil"
-        />
-        <div className="banner-opacity"></div>
-        <h1>Chez vous, partout et ailleurs</h1>
-      </div>
-    );
-  } else if (location.pathname === "/about") {
-    return (
-      <div className="banner">
-        <img
-          className="banner-image"
-          src={imgBannerAbout}
-          alt="banner de la page à propos"
-        />
-        <div className="banner-opacity"></div>
-      </div>
-    );
-  } else {
-    return null;
+  let bannerImg = imgBannerAccueil;
+  let bannerAlt = "banner de la page d'accueil";
+  let bannerTitle = "Chez vous, partout et ailleurs";
+
+  if (location.pathname !== "/") {
+    bannerImg = imgBannerAbout;
+    bannerAlt = "banner de la page à propos";
+    bannerTitle = null;
   }
+
+  return (
+    <div className="banner">
+      <img className="banner-image" src={bannerImg} alt={bannerAlt} />
+      <div className="banner-opacity"></div>
+      <h1>{bannerTitle}</h1>
+    </div>
+  );
 }
 
 export default Banner;
