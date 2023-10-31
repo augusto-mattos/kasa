@@ -381,42 +381,6 @@
   gap: 25px;
   margin-top: 50px;
 }
-.fiche-logement-container .title-and-host {
-  display: flex;
-  justify-content: space-between;
-}
-.fiche-logement-container .title-and-host .logement-title {
-  color: #FF6060;
-  text-align: left;
-  letter-spacing: 0em;
-}
-.fiche-logement-container .title-and-host .logement-title h1 {
-  font-weight: 500;
-  font-size: 36px;
-  line-height: 51px;
-  margin: 0;
-}
-.fiche-logement-container .title-and-host .logement-title .adresse {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 26px;
-  margin: 0;
-}
-.fiche-logement-container .title-and-host .host {
-  display: flex;
-  gap: 10px;
-}
-.fiche-logement-container .title-and-host .host .host-name {
-  color: #FF6060;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 26px;
-}
-.fiche-logement-container .title-and-host .host .host-picture {
-  width: 64px;
-  height: 64px;
-  border-radius: 32px;
-}
 .fiche-logement-container .tags-container {
   display: flex;
   gap: 10px;
@@ -434,6 +398,43 @@
   line-height: 20px;
   justify-content: center;
   align-items: center;
+}
+
+.logement-info-header {
+  display: flex;
+  justify-content: space-between;
+}
+.logement-info-header .logement-title {
+  color: #FF6060;
+  text-align: left;
+  letter-spacing: 0em;
+}
+.logement-info-header .logement-title h1 {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 51px;
+  margin: 0;
+}
+.logement-info-header .logement-title .adresse {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0;
+}
+.logement-info-header .host {
+  display: flex;
+  gap: 10px;
+}
+.logement-info-header .host .host-name {
+  color: #FF6060;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+}
+.logement-info-header .host .host-picture {
+  width: 64px;
+  height: 64px;
+  border-radius: 32px;
 }
 
 body {
