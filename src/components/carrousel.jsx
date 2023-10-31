@@ -33,9 +33,9 @@ function Carrousel() {
               src={logementPictures[currentId]}
               alt={`Photographie ${currentId + 1} du logement ${urlLogementId}`}
             />
-            <p className="img-counter">{`${currentId + 1}/${
-              logementPictures.length
-            }`}</p>
+            <p className="img-counter">
+              {`${currentId + 1}/${logementPictures.length}`}
+            </p>
             <button className="previous-img" onClick={prevSlide}>
               <img src={arrowSlider} alt="photographie précédente" />
             </button>
