@@ -383,6 +383,7 @@
 }
 .fiche-logement-container .title-and-host {
   display: flex;
+  justify-content: space-between;
 }
 .fiche-logement-container .title-and-host .logement-title {
   color: #FF6060;
@@ -400,6 +401,21 @@
   font-size: 18px;
   line-height: 26px;
   margin: 0;
+}
+.fiche-logement-container .title-and-host .host {
+  display: flex;
+  gap: 10px;
+}
+.fiche-logement-container .title-and-host .host .host-name {
+  color: #FF6060;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+}
+.fiche-logement-container .title-and-host .host .host-picture {
+  width: 64px;
+  height: 64px;
+  border-radius: 32px;
 }
 .fiche-logement-container .tags-container {
   display: flex;

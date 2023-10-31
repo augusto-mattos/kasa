@@ -11,6 +11,9 @@ function FicheLogement() {
   const title = logement.title;
   const adresse = logement.location;
   const tagsListe = logement.tags;
+  const hostInfo = logement.host;
+  const hostName = hostInfo.name;
+  const hostPicture = hostInfo.picture;
 
   return (
     <div className="fiche-logement-container">
@@ -21,7 +24,11 @@ function FicheLogement() {
           <h1>{title}</h1>
           <p className="adresse">{adresse}</p>
         </div>
-        <div className="host">picture</div>
+        
+        <div className="host">
+          <p className="host-name">{hostName}</p>
+          <img className="host-picture" src={hostPicture} alt="host" />
+        </div>
       </div>
 
       <div className="tags-container">
@@ -31,7 +38,7 @@ function FicheLogement() {
           </span>
         ))}
       </div>
-      
+
     </div>
   );
 }

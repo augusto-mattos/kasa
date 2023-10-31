@@ -9,6 +9,7 @@
   margin-top: 50px;
   .title-and-host {
     display: flex;
+    justify-content: space-between;
     .logement-title {
       color: variables.$primary-color;
       text-align: left;
@@ -24,6 +25,21 @@
         font-size: 18px;
         line-height: 26px;
         margin: 0;
+      }
+    }
+    .host {
+      display: flex;
+      gap: 10px;
+      .host-name {
+        color: variables.$primary-color;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 26px;
+      }
+      .host-picture {
+        width: 64px;
+        height: 64px;
+        border-radius: 32px;
       }
     }
   }
