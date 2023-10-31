@@ -1,14 +1,7 @@
-import { useLocation } from "react-router-dom";
 import { useState } from "react";
-import data from "../data/annonces.json";
 import arrowSlider from "../assets/arrow-slider.png";
 
-function Carrousel() {
-  const location = useLocation();
-  const currentUrl = location.pathname;
-  const urlLogementId = currentUrl.split("/")[2];
-
-  const logement = data.find((item) => item.id === urlLogementId);
+function Carrousel({ logement }) {
 
   const logementPictures = logement.pictures;
 
@@ -31,7 +24,7 @@ function Carrousel() {
           <div className="caroussel-container">
             <img
               src={logementPictures[currentId]}
-              alt={`Photographie ${currentId + 1} du logement ${urlLogementId}`}
+              alt={`Photographie ${currentId + 1} du logement ${logement.id}`}
             />
             <p className="img-counter">
               {`${currentId + 1}/${logementPictures.length}`}
@@ -48,7 +41,7 @@ function Carrousel() {
         <div className="caroussel-container">
           <img
             src={logementPictures[currentId]}
-            alt={`Photographie ${currentId + 1} du logement ${urlLogementId}`}
+            alt={`Photographie ${currentId + 1} du logement ${logement.id}`}
           />
         </div>
       )}
