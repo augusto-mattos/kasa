@@ -1,0 +1,12 @@
+@use "../variables";
+@use "../mixins";
+
+h1 {
+  @include mixins.desktop-max-width();
+  color: variables.$primary-color;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 51px;
+  letter-spacing: 0em;
+  text-align: left;
+}
