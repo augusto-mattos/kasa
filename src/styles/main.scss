@@ -4,8 +4,9 @@
 @use "./components/cards";
 @use "./components/accordion";
 @use "./components/error404";
-@use "./components/carrousel.scss";
+@use "./components/carrousel";
 @use "./pages/accomodation";
+@use "./components/logementInfoHeader";
 
 body {
   display: flex;

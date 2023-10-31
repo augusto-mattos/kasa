@@ -1,0 +1,38 @@
+@use "../variables";
+
+.logement-info-header {
+  display: flex;
+  justify-content: space-between;
+  .logement-title {
+    color: variables.$primary-color;
+    text-align: left;
+    letter-spacing: 0em;
+    h1 {
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 51px;
+      margin: 0;
+    }
+    .adresse {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 26px;
+      margin: 0;
+    }
+  }
+  .host {
+    display: flex;
+    gap: 10px;
+    .host-name {
+      color: variables.$primary-color;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 26px;
+    }
+    .host-picture {
+      width: 64px;
+      height: 64px;
+      border-radius: 32px;
+    }
+  }
+}
