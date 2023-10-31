@@ -1,8 +1,8 @@
-import Caroussel from "../../components/caroussel";
+import Carrousel from "../../components/carrousel";
 
 function FicheLogement() {
   return (
-    <Caroussel />
+    <Carrousel />
   )
 }
 
