@@ -2,6 +2,7 @@
 
 .caroussel {
   @include mixins.desktop-max-width();
+  margin: 0;
   .caroussel-container {
     @include mixins.radius-25();
     height: 425px;
