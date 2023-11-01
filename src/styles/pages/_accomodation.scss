@@ -1,9 +1,0 @@
-@use "../mixins";
-
-.fiche-logement-container {
-  @include mixins.desktop-max-width();
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  margin-top: 50px;
-}
