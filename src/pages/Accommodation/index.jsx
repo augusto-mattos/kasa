@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom";
 import data from "../../data/annonces.json";
 import Carrousel from "../../components/carrousel";
 import LogementInfoHeader from "../../components/logementInfoHeader";
+import Tags from "../../components/tags";
 
 function FicheLogement() {
   const location = useLocation();
@@ -27,14 +28,7 @@ function FicheLogement() {
         hostName={hostName}
         hostPicture={hostPicture}
       />
-
-      <div className="tags-container">
-        {tagsListe.map((tag, index) => (
-          <span className="tag" key={index}>
-            {tag}
-          </span>
-        ))}
-      </div>
+      <Tags tagsListe={tagsListe}/>
     </div>
   );
 }
