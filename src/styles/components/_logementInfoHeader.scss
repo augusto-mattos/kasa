@@ -23,8 +23,14 @@
   .host {
     display: flex;
     gap: 10px;
+    height: 64px;
+    width: 167px;
     .host-name {
       color: variables.$primary-color;
+      display: flex;
+      align-items: center;
+      text-align: end;
+      margin: 0;
       font-size: 18px;
       font-weight: 500;
       line-height: 26px;

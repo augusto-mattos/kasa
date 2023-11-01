@@ -2,40 +2,36 @@ import { useLocation } from "react-router-dom";
 import data from "../../data/annonces.json";
 import Carrousel from "../../components/carrousel";
 import LogementInfoHeader from "../../components/logementInfoHeader";
+import Tags from "../../components/tags";
+import Rating from "../../components/rating";
 
 function FicheLogement() {
   const location = useLocation();
   const currentUrl = location.pathname;
   const urlLogementId = currentUrl.split("/")[2];
   const logement = data.find((item) => item.id === urlLogementId);
-  
-  const title = logement.title;
-  const adresse = logement.location;
-  
+    
   const hostInfo = logement.host;
-  const hostName = hostInfo.name;
-  const hostPicture = hostInfo.picture;
-  
-  const tagsListe = logement.tags;
 
   return (
     <div className="fiche-logement-container">
+
+    <div className="logement-header">
       <Carrousel logement={logement} />
       <LogementInfoHeader
-        title={title}
-        adresse={adresse}
-        hostName={hostName}
-        hostPicture={hostPicture}
+        title={logement.title}
+        adresse={logement.location}
+        hostName={hostInfo.name}
+        hostPicture={hostInfo.picture}
       />
-
-      <div className="tags-container">
-        {tagsListe.map((tag, index) => (
-          <span className="tag" key={index}>
-            {tag}
-          </span>
-        ))}
-      </div>
     </div>
+    <div className="tags-and-rating">
+      <Tags tagsListe={logement.tags} />
+      <Rating rating={logement.rating} />
+    </div>
+    </div>
+    
+    
   );
 }
 
