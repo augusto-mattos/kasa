@@ -19,20 +19,33 @@ function AccordionItem({ title, content }) {
         ></img>
       </div>
       <div className={`accordion-content ${isExpanded ? "expanded" : ""}`}>
-        <p>{content}</p>
+        {content}
       </div>
     </>
   );
 }
 
 function Accordion({ data }) {
-  return (
-    <div className="collapse">
-      {data.map((item, index) => (
-        <AccordionItem key={index} title={item.title} content={item.content} />
-      ))}
-    </div>
-  );
+
+  if (data) {
+    return (
+      <div className="collapse">
+        {data.map((item, index) => (
+          <AccordionItem
+            key={index}
+            title={item.title}
+            content={item.content}
+          />
+        ))}
+      </div>
+    );
+  } else {
+    return (
+      <div className="collapse">
+        <AccordionItem title="" content="" />
+      </div>
+    );
+  }
 }
 
 export default Accordion;
