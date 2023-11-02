@@ -29,24 +29,30 @@
       letter-spacing: 0em;
       text-align: left;
       margin: 0;
+      @media (max-width: 768px) {
+        font-size: 13px;
+        line-height: 19px;
+      }
     }
     .arrow {
       transition: transform 0.3s ease-in-out;
       &.rotate {
         transform: rotate(180deg);
       }
+      @media (max-width: 768px) {
+        width: 16px;
+      }
     }
   }
   .accordion-content {
     display: flex;
     flex-direction: column;
-    gap: 10px;
     max-height: 0;
     overflow: hidden;
     visibility: hidden;
     padding: 0 20px;
-    background-color: variables.$secondary-color;
     color: variables.$primary-color;
+    background-color: variables.$secondary-color;
     font-family: Montserrat;
     font-size: 18px;
     font-weight: 400;
@@ -59,9 +65,13 @@
       max-height: 1000px;
       padding: 20px;
       visibility: visible;
+      @media (max-width: 768px) {
+        font-size: 12px;
+        line-height: 17px;
+      }
     }
     p {
-      margin: 0
+      margin: 0;
     }
   }
 }

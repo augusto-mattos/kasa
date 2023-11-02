@@ -6,23 +6,50 @@
   flex-direction: column;
   gap: 25px;
   margin-top: 50px;
+  @media (max-width: 768px) {
+    margin-top: 27px;
+    gap: 15px;
+  }
+  .infos-logement {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+    gap: 25px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
   .logement-header {
     display: flex;
     flex-direction: column;
     gap: 25px;
+    @media (max-width: 768px) {
+      gap: 15px;
+    }
   }
-  .tags-and-rating {
+  .host-and-rating {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 768px) {
+      flex-direction: row-reverse;
+    }
   }
   .description-container {
     display: flex;
     gap: 76px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 20px;
+    }
     .collapse {
       margin-top: 0;
       width: 50%;
+      @media (max-width: 768px) {
+        width: 100%;
+      }
       .accordion-header {
         margin-top: 0;
       }
