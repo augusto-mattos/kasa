@@ -6,13 +6,17 @@ import Tags from "../../components/tags";
 import HostInfo from "../../components/hostInfo";
 import Rating from "../../components/rating";
 import Accordion from "../../components/accordion";
+import Error from "../../components/error404";
 
 function FicheLogement() {
   const location = useLocation();
   const currentUrl = location.pathname;
   const urlLogementId = currentUrl.split("/")[2];
   const logement = data.find((item) => item.id === urlLogementId);
-
+ 
+  if (!logement) {
+   return <Error />;
+ }
   const hostInfo = logement.host;
 
   return (
