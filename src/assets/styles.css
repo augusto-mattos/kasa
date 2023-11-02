@@ -241,6 +241,7 @@
 }
 .collapse .accordion-content {
   display: flex;
+  flex-direction: column;
   gap: 10px;
   max-height: 0;
   overflow: hidden;
@@ -258,8 +259,12 @@
   transition: all 0.5s ease-in-out;
 }
 .collapse .accordion-content.expanded {
-  max-height: 200px;
+  max-height: 1000px;
+  padding: 20px;
   visibility: visible;
+}
+.collapse .accordion-content p {
+  margin: 0;
 }
 
 .error-container {
@@ -391,6 +396,17 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+.fiche-logement-container .description-container {
+  display: flex;
+  gap: 76px;
+}
+.fiche-logement-container .description-container .collapse {
+  margin-top: 0;
+  width: 50%;
+}
+.fiche-logement-container .description-container .collapse .accordion-header {
+  margin-top: 0;
 }
 
 .logement-info-header {

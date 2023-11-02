@@ -39,6 +39,7 @@
   }
   .accordion-content {
     display: flex;
+    flex-direction: column;
     gap: 10px;
     max-height: 0;
     overflow: hidden;
@@ -55,8 +56,12 @@
     border-radius: 0 0 5px 5px;
     transition: all 0.5s ease-in-out;
     &.expanded {
-      max-height: 200px;
+      max-height: 1000px;
+      padding: 20px;
       visibility: visible;
+    }
+    p {
+      margin: 0
     }
   }
 }
