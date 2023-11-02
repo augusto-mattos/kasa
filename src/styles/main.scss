@@ -8,6 +8,7 @@
 @use "./pages/logement";
 @use "./components/logementInfoHeader";
 @use "./components/tags";
+@use "./components/rating";
 
 body {
   display: flex;
