@@ -567,6 +567,7 @@
 .tags-container {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 .tags-container .tag {
   background-color: #FF6060;
