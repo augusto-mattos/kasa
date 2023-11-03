@@ -17,6 +17,7 @@ function FicheLogement() {
   if (!logement) {
    return <Error />;
  }
+ 
   const hostInfo = logement.host;
 
   return (

@@ -134,42 +134,61 @@
 }
 
 .gallery-container {
-  width: 100%;
-  height: 100%;
-  border-radius: 25px;
   max-width: 1240px;
   margin: 0 auto;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
   margin-top: 50px;
-  padding: 25px 0;
-  justify-content: center;
-  background-color: #F6F6F6;
 }
 @media (max-width: 768px) {
   .gallery-container {
+    margin-top: 0;
+  }
+}
+.gallery-container .gallery {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 50px 60px;
+  gap: 50px;
+  background-color: #F6F6F6;
+}
+@media (max-width: 1280px) {
+  .gallery-container .gallery {
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .gallery-container .gallery {
     background-color: #ffffff;
     gap: 22px;
     margin-top: 0;
     padding: 22px 0;
   }
 }
-.gallery-container .logement-card {
+.gallery-container .gallery .logement-card {
   display: flex;
   position: relative;
-  margin: 25px;
   width: 340px;
   height: 360px;
 }
+@media (max-width: 1280px) {
+  .gallery-container .gallery .logement-card {
+    width: 45%;
+  }
+}
 @media (max-width: 768px) {
-  .gallery-container .logement-card {
+  .gallery-container .gallery .logement-card {
     margin: 0;
     width: 100%;
     height: 255px;
   }
 }
-.gallery-container .logement-card .overlay-card {
+.gallery-container .gallery .logement-card .overlay-card {
   display: flex;
   position: absolute;
   top: 0;
@@ -179,7 +198,7 @@
   height: 100%;
   border-radius: 10px;
 }
-.gallery-container .logement-card h3 {
+.gallery-container .gallery .logement-card h3 {
   color: #ffffff;
   font-size: 18px;
   font-weight: 500;
@@ -188,7 +207,7 @@
   text-align: left;
   margin: 20px;
 }
-.gallery-container .logement-card .logement-cover {
+.gallery-container .gallery .logement-card .logement-cover {
   object-fit: cover;
   position: absolute;
   width: 100%;
@@ -430,7 +449,7 @@
 }
 @media (max-width: 768px) {
   .fiche-logement-container {
-    margin-top: 27px;
+    margin-top: 0;
     gap: 15px;
   }
 }
