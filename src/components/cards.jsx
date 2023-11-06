@@ -1,6 +1,7 @@
 import data from "../data/annonces.json";
 import { Link } from "react-router-dom";
 
+// Cette fonction crée une galerie pour afficher les cards des logements. Elle fait un mapping des données fournies pour identifier les IDs de logements et creer une div "logement-card" pour chaque logement identifié. Dans cette div il y a un lien vers la page du logement correspondant. De la liste de données la fonction récupère aussi une image de couverture pour le card et le titre du logement  
 function Cards() {
   return (
     <div className="gallery-container">

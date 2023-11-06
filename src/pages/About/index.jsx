@@ -1,7 +1,7 @@
 import Banner from "../../components/banner";
 import Accordion from "../../components/accordion";
 
-const accordionData = [
+const aboutAccordionData = [
   {
     title: "Fiabilité",
     content:
@@ -28,7 +28,7 @@ function About() {
   return (
     <>
       <Banner />
-      <Accordion data={accordionData} />
+      <Accordion data={aboutAccordionData} />
     </>
   );
 }
