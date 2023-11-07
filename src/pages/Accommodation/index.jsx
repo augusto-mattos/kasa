@@ -9,16 +9,16 @@ import Accordion from "../../components/accordion";
 import Error from "../../components/error404";
 
 function FicheLogement() {
-  const location = useLocation();
+  const location = useLocation(); // useLocation pour obtenir l'URL
   const currentUrl = location.pathname;
-  const urlLogementId = currentUrl.split("/")[2];
-  const logement = data.find((item) => item.id === urlLogementId);
+  const urlLogementId = currentUrl.split("/")[2]; // Extraction de l'ID du logement à partir de l'URL
+  const logement = data.find((item) => item.id === urlLogementId); // cette constante recherche dans l'array le données du logement correspondant  
  
   if (!logement) {
-   return <Error />;
+   return <Error />; // s'il n'y a pas de logement à afficher, la page affiche le composant de la page d'erreur
  }
  
-  const hostInfo = logement.host;
+  const hostInfo = logement.host; // hostInfo récupère les données de host dans l'array de données 
 
   return (
     <div className="fiche-logement-container">
